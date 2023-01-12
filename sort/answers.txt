@@ -1,0 +1,32 @@
+sort1 uses: bubble sort
+
+How do you know?: The difference between times of random and sorted(best case) is the biggest. Knowing that the best case here is omega n. Increase of n cause exponencial increase of time.
+
+on random5000 / 10000 / 50000
+real    0m0.095s / 0m0.297s / 0m8.136s
+on reversed5000 / 10000 / 50000
+real    0m0.104s / 0m0.293s / 0m6.160s
+on sorted5000 / 10000 / 50000
+real    0m0.050s / 0m0.072s / 0m0.603s
+
+sort2 uses: merge sort
+
+How do you know?: The difference between times of random and sorted(best case) is minor and at the same time the increase of n cause minor increase of total time.
+
+n random5000 / 10000 / 50000
+real    0m0.025s / 0m0.069s / 0m0.489s
+on reversed5000 / 10000 / 50000
+real    0m0.027s / 0m0.209s / 0m0.449s
+on sorted5000 / 10000 / 50000
+real    0m0.029s / 0m0.092s / 0m0.473s
+
+sort3 uses: selection sort
+
+How do you know?: Having the first two identified for sure, this is the only option left. Unlike bubble sort, here is the best case omega n squared 2.
+
+on random5000 / 10000 / 50000
+real    0m0.056s / 0m0.195s / 0m3.683s
+on reversed5000 / 10000 / 50000
+real    0m0.058s / 0m0.224s / 0m3.561s
+on sorted5000 / 10000 / 50000
+real    0m0.059s / 0m0.218s / 0m3.424s
