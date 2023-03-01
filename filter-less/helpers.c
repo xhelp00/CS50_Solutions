@@ -23,6 +23,23 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
 void sepia(int height, int width, RGBTRIPLE image[height][width])
 {
     //nested for loops to iterate all rows and columns
+	for (int i = 0; i < height; i++)
+    {
+        for (int j = 0; j < width; j++)
+        {
+            int red = image[i][j].rgbtRed;
+            int green = image[i][j].rgbtGreen;
+            int blue = image[i][j].rgbtBlue;
+
+            int sepiaRed = round(0.393 * red + 0.769 * green + 0.189 * blue);
+            int sepiaGreen = round(0.349 * red + 0.686 * green + 0.168 * blue);
+            int sepiaBlue = round(0.272 * red + 0.534 * green + 0.131 * blue);
+
+            image[i][j].rgbtRed = fmin(255, sepiaRed);
+            image[i][j].rgbtGreen = fmin(255, sepiaGreen);
+            image[i][j].rgbtBlue = fmin(255, sepiaBlue);
+        }
+    }
     return;
 }
 
